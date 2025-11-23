@@ -22,7 +22,7 @@ App runs at: http://localhost:8080
 ☸️ Kubernetes Setup
 Installed k3s on Debian
 Applied all manifests from infra/k8s/
-Added local DNS entry (e.g., music.local)
+Added local DNS entry (e.g., http://music.local)
 App accessible through NGINX Ingress
 
 🚀 CI/CD Workflow
