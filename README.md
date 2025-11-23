@@ -103,6 +103,3 @@ what “self-hosted runner” means in practice
 It’s a small project but it taught me a lot.
 
 🙌 Thanks for checking it out
-I'm still improving it as I go.
-If you like this style or want something more professional, I can generate Version 2.
-Want me to push this README automatically to your repo?
