@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Music Streaming DevOps Project
 
 This project is part of my DevOps learning journey.  
@@ -80,3 +81,5 @@ The web app image is stored here:
 ---
 
 This is a learning project, so it will evolve as I experiment with more DevOps tools.
+=======
+# music-app-containerized-infra
