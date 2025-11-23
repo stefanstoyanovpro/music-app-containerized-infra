@@ -1,4 +1,4 @@
-🎵 Music App – Containerized Deployment Platform
+🎵 Music App – Containerized Deployment Platform @
 A minimal PHP service deployed using a fully containerized architecture with Kubernetes (k3s), GitHub Actions, and automated CI/CD.
 
 🔧 Tech & Tools
