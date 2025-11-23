@@ -1,0 +1,35 @@
+services:
+  web:
+    build:
+      context: ..
+      dockerfile: infra/web.Dockerfile
+    container_name: music-web
+    depends_on:
+      - db
+    env_file:
+      - .env
+    ports:
+      - "8080:80"
+    volumes:
+      - /opt/music-streaming/app/public:/var/www/html:ro
+      - /srv/music-data:/var/music:ro
+    networks:
+      - music-net
+    restart: unless-stopped
+
+  db:
+    image: mariadb:11
+    container_name: music-db
+    env_file:
+      - .env
+    volumes:
+      - music-db-data:/var/lib/mysql
+    networks:
+      - music-net
+    restart: unless-stopped
+
+networks:
+  music-net:
+
+volumes:
+  music-db-data:

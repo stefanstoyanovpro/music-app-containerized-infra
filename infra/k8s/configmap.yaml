@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: music-web-config
+  namespace: music-app
+data:
+  DB_HOST: music-db
+  DB_NAME: musicdb

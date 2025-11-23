@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: music-web
+  namespace: music-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: music-web
+  template:
+    metadata:
+      labels:
+        app: music-web
+    spec:
+      containers:
+        - name: web
+          image: stefanstoyanovpro/music-web:latest
+          ports:
+            - containerPort: 80
+          env:
+            - name: DB_HOST
+              value: music-db
+            - name: DB_NAME
+              value: musicdb
+            - name: DB_USER
+              valueFrom:
+                secretKeyRef:
+                  name: music-db-secret
+                  key: MYSQL_USER
+            - name: DB_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: music-db-secret
+                  key: MYSQL_PASSWORD
